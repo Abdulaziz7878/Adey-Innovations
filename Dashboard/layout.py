@@ -13,24 +13,16 @@ def create_layout(app):
             dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H5("Average Temperature (°C)", className="card-title"),
-                        html.H2(id='average-temperature', className="card-text")
+                        html.H5("Average Age (°C)", className="card-title"),
+                        html.H2(id='average-Age', className="card-text")
                     ])
                 ], className="mb-2")
             ], md=4),
             dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.H5("Average Humidity (%)", className="card-title"),
-                        html.H2(id='average-humidity', className="card-text")
-                    ])
-                ], className="mb-2")
-            ], md=4),
-            dbc.Col([
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5("Average Wind Speed (km/h)", className="card-title"),
-                        html.H2(id='average-windspeed', className="card-text")
+                        html.H5("Average Class (%)", className="card-title"),
+                        html.H2(id='average-class', className="card-text")
                     ])
                 ], className="mb-2")
             ], md=4),
@@ -40,7 +32,7 @@ def create_layout(app):
                 dbc.CardGroup([
                     dbc.Label("Select Year"),
                     dcc.Dropdown(
-                        id='year-dropdown',
+                        id='age-dropdown',
                         options=[],
                         value=None,
                         clearable=False
@@ -49,9 +41,9 @@ def create_layout(app):
             ], md=6),
             dbc.Col([
                 dbc.CardGroup([
-                    dbc.Label("Select Month"),
+                    dbc.Label("Select class"),
                     dcc.Dropdown(
-                        id='month-dropdown',
+                        id='class-dropdown',
                         options=[],
                         value=None,
                         clearable=False
@@ -61,18 +53,18 @@ def create_layout(app):
         ], className="mb-4"),
         dbc.Row([
             dbc.Col([
-                dcc.Graph(id='temperature-over-time')
+                dcc.Graph(id='age')
             ], md=6),
             dbc.Col([
-                dcc.Graph(id='humidity-over-time')
+                dcc.Graph(id='class')
             ], md=6),
         ]),
         dbc.Row([
             dbc.Col([
-                dcc.Graph(id='weather-condition-pie')
+                dcc.Graph(id='fraud-pie')
             ], md=6),
             dbc.Col([
-                dcc.Graph(id='windspeed-distribution')
+                dcc.Graph(id='age-fraud-distribution')
             ], md=6),
         ]),
     ], fluid=True)
