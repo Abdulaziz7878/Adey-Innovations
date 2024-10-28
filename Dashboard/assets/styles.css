@@ -1,0 +1,26 @@
+/* Adjust margins */
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Center the header */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h6 {
+  text-align: left;
+  margin-top: 20px;
+}
+h5 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
